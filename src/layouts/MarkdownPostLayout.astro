@@ -1,4 +1,5 @@
 ---
+import Tags from "../components/Tags.astro"
 import BaseLayout from "./BaseLayout.astro"
 
 const { frontmatter } = Astro.props
@@ -14,6 +15,7 @@ const { frontmatter } = Astro.props
     <br/>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
     <br />
+    <Tags tagsFromPost={frontmatter.tags} />
   </div>
 
   <slot />
